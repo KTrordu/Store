@@ -12,5 +12,7 @@ namespace StoreApp.DAL.AppDbContext
         AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
+        public DbSet<StoreApp.Domain.Entities.Product> Products { get; set; }
     }
 }
