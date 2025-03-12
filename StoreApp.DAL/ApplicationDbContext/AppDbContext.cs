@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoreApp.DAL.AppDbContext
+namespace StoreApp.DAL.ApplicationDbContext
 {
     public class AppDbContext : DbContext
     {
-        AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
+            
         }
 
         public DbSet<StoreApp.Domain.Entities.Product> Products { get; set; }
