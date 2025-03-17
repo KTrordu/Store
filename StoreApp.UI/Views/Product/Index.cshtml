@@ -1,0 +1,23 @@
+﻿@using StoreApp.Domain.Entities
+@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    @foreach(var product in Model)
+    {
+        <div>
+            <h3>@product.ProductName</h3>
+            <p>@product.Price</p>
+        </div>
+    }
+</body>
+</html>
