@@ -4,23 +4,17 @@
 @{
     ViewData["Title"] = "Index";
 }
+@{
+    Layout = "_Layout";
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    @foreach(var product in Model)
-    {
-        <div>
-            <h3>@product.ProductName</h3>
-            <p>@product.Price</p>
-            <p>
-                <a href="/Product/Get/@product.Id">Get Details</a>
-            </p>
-        </div>
-    }
-</body>
-</html>
+@foreach(var product in Model)
+{
+    <div>
+        <h3>@product.ProductName</h3>
+        <p>@product.Price</p>
+        <p>
+            <a href="/Product/Get/@product.Id">Get Details</a>
+        </p>
+    </div>
+}

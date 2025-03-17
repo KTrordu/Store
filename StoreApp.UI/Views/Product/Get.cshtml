@@ -1,16 +1,11 @@
 ﻿@using StoreApp.Domain.Entities
 @model Product
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div>
-        <h1>@Model.ProductName</h1>
-        <p>@Model.Price</p>
-    </div>
-</body>
-</html>
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h1>@Model.ProductName</h1>
+    <p>@Model.Price</p>
+</div>
