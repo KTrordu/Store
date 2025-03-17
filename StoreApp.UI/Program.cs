@@ -10,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 
 var app = builder.Build();
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 
