@@ -4,15 +4,15 @@
   "libraries": [
     {
       "library": "bootstrap@5.3.3",
-      "destination": "wwwroot/lib/bootstrap"
+      "destination": "StoreApp.UI/wwwroot/lib/bootstrap"
     },
     {
       "library": "font-awesome@6.7.2",
-      "destination": "wwwoot/lib/font-awesome"
+      "destination": "StoreApp.UI/wwwroot/lib/font-awesome"
     },
     {
       "library": "jquery@3.7.1",
-      "destination": "wwwroot/lib/jquery"
+      "destination": "StoreApp.UI/wwwroot/lib/jquery"
     }
   ]
 }
