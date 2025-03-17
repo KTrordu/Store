@@ -2,9 +2,9 @@
 
 <div>
     <h3>@Model.ProductName</h3>
-    <p>@Model.Price</p>
+    <p>@Model.Price.ToString("c")</p>
     <p>
-        <a asp-controller="Product" asp-action="Get">Get Details</a>
+        <a asp-controller="Product" asp-action="Get" asp-route-id="@Model.Id">Get Details</a>
     </p>
     <hr />
 </div>
