@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using StoreApp.DAL.ApplicationDbContext;
+using StoreApp.Domain.Entities;
 
 namespace StoreApp.UI.Controllers
 {
@@ -17,6 +19,12 @@ namespace StoreApp.UI.Controllers
             var model = _db.Products.ToList();
 
             return await Task.FromResult((IActionResult) View(model));
+        }
+
+        public async Task<IActionResult> Get(int id)
+        {
+            Product product = await _db.Products.FirstOrDefaultAsync(p => p.Id == id);
+            return View(product);
         }
     }
 }
